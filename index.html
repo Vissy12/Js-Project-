@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f9f9f9;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 500;
+            }
+
+            form {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 8px rbga(0, 0, 0, 0.2);
+                width: 300px;
+
+                label {
+                display: block;
+                margin-bottom: 16px;
+                border-radius: 4px;
+            }
+
+
+            input:focus {
+                border-color: #0078d7;
+                outline: done;
+            }
+              
+            span {
+                display: block;
+                margin-bottom: 16px;
+                font-size: 0.9em;
+                color: #555;
+                 }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+        <form id="myForm">
+        <h1>Registration Form</h1>
+
+        <label>Email:</label>
+        <input id="email" type="email" placeholder="Enter your E-mail" required>
+        <span class="error" id="emailError"></span> <br>
+
+        <label for="password">Password:</label>
+        <input id="password" type="password" placeholder="Enter the password" required>
+        <span class="error" id="passwordError"></span> <br>
+
+
+        <label>Confirm Password:</label>
+        <input id="confirmPassword" type="password" placeholder="Re-enter the password" required>
+        <span class="error "id="confirmPasswordError"></span> <br>
+
+        <label>Show Password:</label>
+        <input id="showpass" type="checkbox">
+
+        <label>Phone Number:</label>
+        <input id="phone" type="number" placeholder="Enter phone number">
+        <span class="error" id="phoneError"></span> <br>
+
+        <label>Age:</label>
+        <input id="age" type="number" placeholder="Enter your age">
+        <span class="error" id="ageError"></span> <br>
+
+        <label>OTP:</label>
+        <input id="otp" type="number" placeholder="Enter the OTP" readonly>
+        <button id="generateOtpButton">Generate OTP</button>
+        <span class="error" id="otpError"></span>
+        
+        <label>Accept Terms & Condtion:</label>
+        <input id="terms" type="checkbox">
+        <span id="terms"></span>
+
+        <input id="submit" type="submit">
+        <span id="submit"></span> <br>
+    </form>
+</div>
+    </body>
+    <script src="index.js"></script>
+</html>
